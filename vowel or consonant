@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() 
+{ 
+    char ch; 
+  
+    printf("Enter a Character  ");
+    scanf("%c",&ch);
+     char temp = toupper(ch);
+     if(temp=='A'||temp=='E'||temp=='I'||temp=='O'||temp=='U'){
+        printf("%c is a Vowel",ch);
+    }
+    else
+      printf("%c is a consonant",ch);
+  
+    return 0; 
+} 
