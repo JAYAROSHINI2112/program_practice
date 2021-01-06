@@ -1,0 +1,27 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   int i,arr[20],*ptr,n,k=0,key;
+   printf("Enter the value of n  ");
+   scanf("%d",&n);
+   printf("Enter the values ");
+   for(i=0;i<n;i++){
+   scanf("%d",&arr[i]);
+   }
+   printf("Enter the key value to find ");
+   scanf("%d",&key);
+   ptr=arr;
+   for(i=1;i<=n;i++){
+       if(*(ptr+i) == key){
+           printf("%d is found in position %d ",key,i);
+         }
+         else{
+             k=k+1;
+         }
+   }
+   if(k==n){
+         printf("%d is not found ",key);   
+   }
+    return 0;
+}
