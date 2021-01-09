@@ -1,0 +1,45 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   int mat[10][10],i,j,sum=0,sum_no_diagonal=0,sum_no_notriangle=0;
+   printf("Enter the values  \n");
+   for(i=0;i<3;i++){
+       for(j=0;j<3;j++){
+           scanf("%d",&mat[i][j]);
+       }
+   }
+   printf("The Entered Matrix \n");
+      for(i=0;i<3;i++){
+       for(j=0;j<3;j++){
+          printf("%d  ",mat[i][j]);
+       }
+       printf("\n");
+   }
+         for(i=0;i<3;i++){
+       for(j=0;j<3;j++){
+          sum=sum+mat[i][j];
+       }
+   }
+    printf("The Sum of all Matrixs element %d\n",sum);
+    
+     for(i=0;i<3;i++){
+       for(j=0;j<3;j++){
+           if(i==j){
+           }
+           else
+          sum_no_diagonal=sum_no_diagonal+mat[i][j];
+       }
+   }
+printf("The Sum of no diagonal element %d\n",sum_no_diagonal);
+   
+    for(i=0;i<3;i++){
+       for(j=0;j<3;j++){
+           if(j<i){
+            sum_no_notriangle=sum_no_notriangle+mat[i][j];
+       }
+   }
+    }
+printf("The Sum of Lower Triangle element %d",sum_no_notriangle); 
+    return 0;
+}
