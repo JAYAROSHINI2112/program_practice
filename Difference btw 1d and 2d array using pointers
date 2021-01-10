@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main(){
+    int x[3][3]={1,2,2,3,1,1,5,2,3},i,j;
+    int y[2]={1,5},sum=0;
+    printf("1D arrays ");
+    i=1;
+    printf("  %d ",*y+i);//inc the value
+    printf("  %d ",*(y+i));//go to nxt value
+    printf("\nThe Values of 2D Array : \n");
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+          printf("%d ",*(*(x+i)+j));  
+        }
+        printf("\n");
+    }
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+         sum=sum+*(*(x+i)+j);  
+        }
+   }
+    printf("Sum of 2D Array is %d ",sum);
+    
+    return 0;
+}
