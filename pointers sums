@@ -1,0 +1,120 @@
+ 
+Home » C Programming » PointersChange Language
+Pointers - General Questions
+Pointers - Find Output of Program
+Pointers - Point Out Correct Statements
+1. 	
+What will be the output of the program ?
+
+#include<stdio.h>
+
+int main()
+{
+    static char *s[] = {"black", "white", "pink", "violet"};
+    char **ptr[] = {s+3, s+2, s+1, s}, ***p;
+    p = ptr;
+    ++p;
+    printf("%s", **p+1);2. 	
+What will be the output of the program ?
+
+#include<stdio.h>
+
+int main()
+{
+    int i=3, *j, k;
+    j = &i;
+    printf("%d\n", i**j*i+*j);
+    return 0;
+}
+A.	30
+B.	27
+C.	9
+D.	3
+Answer: Option A
+    return 0;
+}
+A.	ink
+B.	ack
+C.	ite
+D.	let
+Answer: Option A
+
+2. 	
+What will be the output of the program ?
+
+#include<stdio.h>
+
+int main()
+{
+    int i=3, *j, k;
+    j = &i;
+    printf("%d\n", i**j*i+*j);
+    return 0;
+}
+A.	30
+B.	27
+C.	9
+D.	3
+Answer: Option A
+
+3. 	
+What will be the output of the program ?
+
+#include<stdio.h>
+
+int main()
+{
+    int x=30, *y, *z;
+    y=&x; /* Assume address of x is 500 and integer is 4 byte size */
+    z=y;
+    *y++=*z++;
+    x++;
+    printf("x=%d, y=%d, z=%d\n", x, y, z);
+    return 0;
+}
+A.	x=31, y=502, z=502
+B.	x=31, y=500, z=500
+C.	x=31, y=498, z=498
+D.	x=31, y=504, z=504
+Answer: Option D
+
+
+4. 	
+What will be the output of the program ?
+
+#include<stdio.h>
+
+int main()
+{
+    char str[20] = "Hello";
+    char *const p=str;
+    *p='M';
+    printf("%s\n", str);
+    return 0;
+}
+A.	Mello
+B.	Hello
+C.	HMello
+D.	MHello
+Answer: Option A
+
+
+5. 	
+What will be the output of the program If the integer is 4bytes long?
+
+#include<stdio.h>
+
+int main()
+{
+    int ***r, **q, *p, i=8;
+    p = &i;
+    q = &p;
+    r = &q;
+    printf("%d, %d, %d\n", *p, **q, ***r);
+    return 0;
+}
+A.	8, 8, 8
+B.	4000, 4002, 4004
+C.	4000, 4004, 4008
+D.	4000, 4008, 4016
+Answer: Option A
